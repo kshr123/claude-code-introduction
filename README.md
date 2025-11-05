@@ -26,6 +26,19 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 
 詳細は [.claude/CLAUDE.md](./.claude/CLAUDE.md) を参照してください。
 
+## ⚠️ 重要な注意事項
+
+**このリポジトリのドキュメントはClaude Code（AI）によって作成されています。**
+
+- 📝 全てのガイド記事はClaude Codeを使って作成されました
+- ⚠️ **内容に誤りや古い情報が含まれている可能性があります**
+- 🔍 **重要な情報は必ず公式ドキュメントで確認してください**
+- 💡 このリポジトリ自体がClaude Codeの活用例として機能しています
+
+正確な情報は以下の公式リソースを参照してください：
+- **Claude Code公式ドキュメント**: https://docs.claude.com/en/docs/claude-code/overview
+- **Claude Code GitHub**: https://github.com/anthropics/claude-code
+
 ## 📚 ガイドコンテンツ
 
 ### 完成済み（5記事 + 統合版）
