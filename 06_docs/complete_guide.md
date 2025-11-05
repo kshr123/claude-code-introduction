@@ -41,6 +41,25 @@ Claude Code     → ターミナルでファイル操作・コマンド実行・
 - MCP（Model Context Protocol）で外部サービスと連携
 - サブエージェントで専門的なタスクを並列処理
 
+### CLI AI ツール詳細比較
+
+| 機能 | GitHub Copilot CLI | Gemini CLI | Claude Code |
+|------|-------------------|------------|-------------|
+| **実行環境** | ターミナル | ターミナル | ターミナル |
+| **ファイル編集** | ✗ | △（提案のみ） | ✓（直接編集） |
+| **複数ファイル編集** | ✗ | ✗ | ✓ |
+| **コマンド実行** | ✓（提案） | ✓（提案） | ✓（実行） |
+| **Git操作** | ✗ | ✗ | ✓ |
+| **プロジェクトメモリ** | ✗ | ✗ | ✓（.claude/CLAUDE.md） |
+| **外部連携（MCP）** | ✗ | ✗ | ✓ |
+| **コンテキスト理解** | 単発 | 単発 | プロジェクト全体 |
+| **サブエージェント** | ✗ | ✗ | ✓ |
+
+**Claude Codeの決定的な違い**:
+1. **実行能力** - 提案だけでなく、実際にファイルを編集・コマンドを実行
+2. **プロジェクトメモリ** - `.claude/CLAUDE.md`で独自ルールを永続化
+3. **チーム共有** - プロジェクトメモリをGitで共有してワークフロー統一
+
 ---
 
 ## クイックスタート
@@ -272,6 +291,66 @@ claude "create a hotfix for the payment processing bug"
 # 3. 再発防止
 claude "add tests to prevent this bug from recurring"
 ```
+
+#### 書籍・チュートリアルのリポジトリから学習コンテンツを作成
+
+**課題**: 技術書のコードを読んで理解し、自分で実装してみたい
+
+**活用**:
+
+```bash
+# 1. リポジトリをクローン
+git clone https://github.com/author/book-repository.git
+cd book-repository
+
+# 2. プロジェクトメモリを作成
+mkdir -p .claude
+cat > .claude/CLAUDE.md << 'EOF'
+# 書籍リポジトリ学習プロジェクト
+
+## 目的
+このリポジトリのコードを理解し、自分で実装しながら学習する
+
+## 学習方法
+1. 参考コードを分析・理解
+2. 自分でゼロから実装
+3. テスト駆動開発で進める
+
+## Claude Codeへの指示
+- コードの説明は丁寧に
+- 実装は段階的に
+- テストを必ず含める
+EOF
+
+# 3. コードを分析
+claude "第1章のコードを分析して、アーキテクチャを説明して"
+
+# 4. 理解を深める
+claude "このデザインパターンの利点と欠点を説明して"
+
+# 5. 自分で実装
+claude "この機能を参考にして、テスト駆動開発で実装して"
+
+# 6. チュートリアルを生成
+claude "この章の内容を初心者向けチュートリアルにまとめて"
+```
+
+**実践例**:
+
+```bash
+# 機械学習の書籍
+claude "analyze @src/neural_network.py and explain the backpropagation algorithm"
+claude "create a tutorial on implementing neural networks from scratch"
+
+# Webアプリケーションの書籍
+claude "explain the authentication flow in @src/auth/"
+claude "implement a similar auth system with modern best practices"
+```
+
+**効果**:
+- 書籍の理解度が大幅に向上
+- 手を動かしながら学習できる
+- 自分のペースで深掘りできる
 
 ### 期待される効果
 
