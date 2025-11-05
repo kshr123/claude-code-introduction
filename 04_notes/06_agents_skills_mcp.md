@@ -442,8 +442,12 @@ claude mcp remove notion
 #### 開発ツール
 - **GitHub**: リポジトリ、Issue、PR管理
 - **Sentry**: エラー監視とトラッキング
+- **Serena**: セマンティックコード検索と編集（Python、Java、TypeScript対応）
 - **Hugging Face**: AI モデルとデータセット
 - **Jam**: バグレポートとスクリーンレコーディング
+
+#### ドキュメント・学習
+- **Context7**: バージョン対応の最新ドキュメントを動的に取得
 
 #### プロジェクト管理
 - **Jira**: タスクとスプリント管理
@@ -469,6 +473,7 @@ claude mcp remove notion
 - **Cloudflare**: CDN・DNS
 
 #### データベース
+- **Supabase**: PostgreSQLベースのBaaS、テーブル管理、クエリ実行、マイグレーション
 - **HubSpot**: CRM
 - **Airtable**: データベース
 - **Daloopa**: 財務データ
@@ -566,6 +571,80 @@ claude "@github:pr://123 をレビューしてセキュリティ問題をチェ�
 claude "見つかった問題をIssueとして作成して"
 ```
 
+#### 4. Context7 - 最新ドキュメントの取得
+
+```bash
+# Context7をインストール
+claude mcp add context7 -- npx -y @upstash/context7-mcp
+
+# または、HTTPトランスポートでリモートサーバーとして
+claude mcp add --transport http context7 https://mcp.context7.com/mcp
+
+# 使用例: 最新のドキュメントを参照しながらコード作成
+claude "use context7 で最新のReact 19のドキュメントを参照してコンポーネントを作成して"
+claude "use context7 でNext.js 15の新機能を使った実装例を示して"
+```
+
+**特徴**:
+- ライブラリのバージョンに対応した最新ドキュメントを自動取得
+- プロンプトに「use context7」を含めるだけで動作
+- 古い情報による実装ミスを防止
+
+#### 5. Serena - セマンティックコード検索
+
+```bash
+# Serenaをインストール
+claude mcp add serena -- npx -y @oraios/serena-mcp
+
+# 使用例: コードベースの意味的な検索
+claude "認証ロジックを実装している箇所を全て見つけて"
+claude "データベーススキーマの変更履歴を追跡して"
+```
+
+**特徴**:
+- IDEのような意味的コード理解
+- Python、Java、TypeScript完全対応
+- テキスト検索ではなくセマンティック検索
+- 無料・オープンソース
+
+**対応言語**:
+- **直接サポート**: Python、Java、TypeScript
+- **間接サポート**: Ruby、Go、C#
+
+#### 6. Supabase - データベース管理
+
+```bash
+# Supabase MCPをインストール（HTTPトランスポート）
+claude mcp add --transport http supabase https://mcp.supabase.com/mcp
+
+# OAuth認証
+/mcp
+# → ブラウザでSupabaseにログイン
+
+# 使用例
+claude "新しいusersテーブルを作成して、email、name、created_atカラムを追加"
+claude "過去30日間にサインアップしたユーザー数を教えて"
+claude "マイグレーションファイルを生成して"
+```
+
+**主な機能**:
+- テーブル設計とスキーマ管理
+- SQLクエリの実行
+- マイグレーション生成
+- ブランチ管理
+- TypeScript型定義の生成
+
+**セキュリティ注意**:
+- ⚠️ **開発環境のみ**: 本番環境には接続しない
+- ⚠️ **プロジェクトスコープ**: 特定プロジェクトに限定
+- ⚠️ **読み取り専用モード**: 実データを扱う場合は読み取り専用に設定
+
+**ローカル開発**:
+```bash
+# Supabase CLI でローカル起動している場合
+# http://localhost:54321/mcp でアクセス可能
+```
+
 ### ⚠️ セキュリティと注意事項
 
 **公式警告**:
@@ -589,9 +668,15 @@ export MAX_MCP_OUTPUT_TOKENS=10000
 
 ### 📖 参考リンク
 
+#### 公式リソース
 - **MCP公式ドキュメント**: https://docs.claude.com/en/docs/claude-code/mcp
 - **MCPサーバーマーケットプレイス**: https://github.com/modelcontextprotocol/servers
 - **MCP仕様**: https://spec.modelcontextprotocol.io/
+
+#### 注目のMCPサーバー
+- **Context7**: https://apidog.com/blog/context7-mcp-server/
+- **Serena**: https://github.com/oraios/serena
+- **Supabase MCP**: https://supabase.com/docs/guides/getting-started/mcp
 
 ---
 
