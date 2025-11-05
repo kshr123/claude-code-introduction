@@ -1,134 +1,76 @@
-# Claude Code 社内紹介プロジェクト
+# Claude Codeの紹介
 
-## 📁 プロジェクト構造
+Claude Codeを初めて使う人のための実践的なガイドです。
+
+## 📁 リポジトリ構造
 
 ```
 .
 ├── 01_reference/           # 参考資料・公式ドキュメント
 ├── 02_templates/           # テンプレートファイル
-│   ├── SPECIFICATION.template.md
-│   ├── pyproject.toml.template
-│   └── test_*.template.py
-├── 03_my_implementations/  # デモ実装・サンプルコード
-├── 04_notes/               # 調査ノート・メモ
+├── 03_my_implementations/  # （予備：必要に応じて使用）
+├── 04_notes/               # 調査ノート・ガイド記事
 ├── 05_progress/            # 進捗記録
 │   └── learning_log.md     # タスク進捗ログ
-└── 06_docs/                # 社内紹介資料
+└── 06_docs/                # 最終的なガイド資料
 ```
 
-## 🎯 プロジェクトの目的
+## 🎯 このリポジトリの目的
 
-社内向けにClaude Codeを紹介するための資料を作成し、以下を達成する：
+Claude Codeの使い方と活用方法を体系的にまとめ、初心者がスムーズに使い始められるようにする：
 
-1. **Claude Codeとは何か**を明確に説明
-2. **実際のユースケース**を具体的に示す
-3. **導入メリット**を定量的・定性的に示す
-4. **実践的なデモ**を通じて理解を深める
-
-### 開発方法論
-
-- **仕様駆動開発（SDD）**: 資料構成とコンテンツを事前に設計
-- **段階的作成**: 小さなステップで確実に進める
-- **フィードバック重視**: 実際の利用者の声を反映
+1. **Claude Codeの基本**を理解する
+2. **実際のユースケース**を知る
+3. **プロジェクトメモリ**（`.claude/CLAUDE.md`）の活用方法を学ぶ
+4. **わかりやすいガイド**を提供する
 
 詳細は [.claude/CLAUDE.md](./.claude/CLAUDE.md) を参照してください。
 
-## 📚 作成する資料コンテンツ
+## 📚 ガイドコンテンツ
 
-1. **イントロダクション** - Claude Codeとは何か
-2. **主要機能** - コア機能の説明
-3. **ユースケース** - 具体的な活用シーン
-4. **デモンストレーション** - 実際の使用例
-5. **導入ガイド** - セットアップ手順
-6. **ベストプラクティス** - 効果的な使い方
-7. **FAQ** - よくある質問と回答
-8. **まとめ** - 導入メリットと次のステップ
+### 完成済み
 
-## 🔧 開発環境
+1. **Claude Code公式ドキュメント調査** - 基本機能、高度な機能の理解
+2. **ユースケース集** - 職種別・シチュエーション別の活用例
+3. **プロジェクトメモリガイド** - `.claude/CLAUDE.md`の役割と使い方
 
-- **Python**: 3.13以上（デモ用）
-- **パッケージマネージャー**: uv
-- **プレゼンテーションツール**: Markdown/Marp/Reveal.js（検討中）
+### 今後作成予定
 
-### セットアップ
+- クイックスタートガイド
+- FAQとトラブルシューティング
+- 統合版ガイド
 
-#### uvのインストール
+## 🚀 このリポジトリの使い方
 
-```bash
-# macOS/Linux
-curl -LsSf https://astral.sh/uv/install.sh | sh
+### ガイド記事を読む
 
-# または Homebrew
-brew install uv
-```
+`04_notes/` に調査ノートとガイド記事があります：
 
-#### Python 3.13のインストール
+1. **[01_research.md](04_notes/01_research.md)** - Claude Codeの基本機能と使い方
+2. **[02_use_cases.md](04_notes/02_use_cases.md)** - 職種別・シチュエーション別の活用例
+3. **[04_project_memory.md](04_notes/04_project_memory.md)** - プロジェクトメモリ（`.claude/CLAUDE.md`）の活用法
 
-```bash
-# uvでPython 3.13をインストール
-uv python install 3.13
-```
+### 進捗を追う
 
-#### 参考資料の配置
-
-```bash
-# 01_reference/に公式ドキュメントやリソースを配置
-mkdir -p 01_reference
-cd 01_reference
-# Claude Code公式ドキュメントやサンプルをダウンロード
-```
-
-## 🚀 使い方
-
-### 資料作成フロー
-
-1. **調査**: 既存のドキュメント、事例を収集
-2. **構成設計**: 資料の構成とストーリーを設計
-3. **コンテンツ作成**: 各セクションを作成
-4. **デモ準備**: 実演用のサンプルコードを作成
-5. **レビュー**: 内容の確認と改善
-6. **プレゼン準備**: スライドやデモ環境の準備
-7. **振り返り**: フィードバックの収集と改善
-
-### テンプレートの活用
-
-`02_templates/` フォルダに以下のテンプレートが用意されています：
-
-- `SPECIFICATION.template.md` - 資料仕様のテンプレート
-- `pyproject.toml.template` - デモプロジェクト設定のテンプレート
-- テストテンプレート - デモコードのテスト用
-
-### 進捗を記録する
-
-`05_progress/learning_log.md` にタスクの進捗を記録
-
-### 調査ノートを取る
-
-`04_notes/` 配下に調査内容やアイデアを記録
-
-### 資料を作成する
-
-`06_docs/` 配下に最終的な社内紹介資料を配置
+`05_progress/learning_log.md` で作成状況を確認できます
 
 ## 📚 重要なドキュメント
 
-- **[.claude/CLAUDE.md](./.claude/CLAUDE.md)** - プロジェクトルールとベストプラクティス（必読）
-- **[05_progress/learning_log.md](./05_progress/learning_log.md)** - タスク進捗と詳細記録
+- **[.claude/CLAUDE.md](./.claude/CLAUDE.md)** - このリポジトリのルールと構成
+- **[05_progress/learning_log.md](./05_progress/learning_log.md)** - 作成状況の記録
 
-## 📝 プロジェクト情報
+## 📝 リポジトリ情報
 
-- **開始日**: 2025-11-05
+- **作成開始**: 2025-11-05
 - **進捗状況**: [05_progress/learning_log.md](./05_progress/learning_log.md) を参照
-- **完了タスク数**: 4 / 8 タスク
-- **完了タスク**:
+- **完成済み記事**: 3件
   - ✅ Claude Code公式ドキュメント調査
   - ✅ ユースケース収集と整理
-  - ✅ プレゼンテーション構成設計
   - ✅ プロジェクトメモリとドキュメント管理調査
 
-## 📖 参考
+## 📖 参考リンク
 
-- **Claude Code公式ドキュメント**: https://docs.anthropic.com/claude/docs
+- **Claude Code公式ドキュメント**: https://docs.claude.com/en/docs/claude-code/overview
 - **Claude Code GitHub**: https://github.com/anthropics/claude-code
 
 ---
