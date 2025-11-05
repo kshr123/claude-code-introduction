@@ -51,7 +51,7 @@ Claude Code     → ターミナルでファイル操作・コマンド実行・
 | **コマンド実行** | ✓（提案） | ✓（提案） | ✓（実行） |
 | **Git操作** | ✗ | ✗ | ✓ |
 | **プロジェクトメモリ** | ✗ | ✗ | ✓（.claude/CLAUDE.md） |
-| **外部連携（MCP）** | ✗ | ✗ | ✓ |
+| **外部連携（MCP）** | ✓（2025年7月〜） | ✓ | ✓（ネイティブ対応） |
 | **コンテキスト理解** | 単発 | 単発 | プロジェクト全体 |
 | **サブエージェント** | ✗ | ✗ | ✓ |
 
@@ -64,6 +64,11 @@ Claude Code     → ターミナルでファイル操作・コマンド実行・
 - [GitHub Copilot CLI vs Claude Code詳細比較 (CometAPI)](https://www.cometapi.com/github-copilot-cli-vs-claude-code/)
 - [Gemini CLI vs Claude Code比較 (Composio)](https://composio.dev/blog/gemini-cli-vs-claude-code-the-better-coding-agent)
 - [CLI AI ツール総合比較 (CodeAnt AI)](https://www.codeant.ai/blogs/claude-code-cli-vs-codex-cli-vs-gemini-cli-best-ai-cli-tool-for-developers-in-2025)
+
+**MCP対応状況**:
+- [GitHub Copilot - MCP対応公式ドキュメント](https://docs.github.com/copilot/customizing-copilot/using-model-context-protocol/extending-copilot-chat-with-mcp)
+- [Gemini CLI - MCP サーバー公式ドキュメント](https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html)
+- [Claude Code - MCP統合](https://docs.claude.com/en/docs/claude-code/overview)
 
 ---
 
