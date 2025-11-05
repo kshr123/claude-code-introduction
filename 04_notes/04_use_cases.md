@@ -19,16 +19,16 @@
 **Claude Codeの活用**:
 ```bash
 # 全体像の把握
-claude "give me an overview of this codebase"
+claude "このコードベースの概要を教えて"
 
 # アーキテクチャの理解
-claude "explain the architecture and main components"
+claude "アーキテクチャと主要なコンポーネントを説明して"
 
 # 特定機能の追跡
-claude "trace how the user authentication flow works"
+claude "ユーザー認証のフローがどう動いているか追跡して"
 
 # 命名規則の確認
-claude "what are the naming conventions used in this project?"
+claude "このプロジェクトで使われている命名規則は何？"
 ```
 
 **メリット**:
@@ -45,13 +45,13 @@ claude "what are the naming conventions used in this project?"
 **Claude Codeの活用**:
 ```bash
 # 実装方法の相談
-claude "what's the best way to implement password hashing?"
+claude "パスワードハッシュ化を実装する最適な方法は？"
 
 # コードレビューの依頼
-claude "review @src/auth.js and suggest improvements"
+claude "@src/auth.js をレビューして改善案を提案して"
 
 # セキュリティチェック
-claude "check this code for security vulnerabilities"
+claude "このコードにセキュリティ脆弱性がないかチェックして"
 ```
 
 **メリット**:
@@ -72,13 +72,13 @@ claude "check this code for security vulnerabilities"
 **Claude Codeの活用**:
 ```bash
 # 自動レビュー
-claude "review all changed files and create a summary"
+claude "変更された全てのファイルをレビューしてサマリーを作成して"
 
 # セキュリティ監査
-claude "check for security issues in the authentication changes"
+claude "認証の変更にセキュリティ問題がないかチェックして"
 
 # パフォーマンスチェック
-claude "analyze performance implications of these database queries"
+claude "これらのデータベースクエリのパフォーマンス影響を分析して"
 ```
 
 **サブエージェントの活用**:
@@ -105,13 +105,13 @@ system_prompt: |
 **Claude Codeの活用**:
 ```bash
 # 設計の相談
-claude --thinking "design a scalable notification system"
+claude --thinking "スケーラブルな通知システムを設計して"
 
 # 複数案の比較
-claude "compare pros and cons of message queue vs pub/sub for notifications"
+claude "通知機能でメッセージキューとPub/Subの長所・短所を比較して"
 
 # 既存システムとの統合
-claude "how can we integrate this feature with our current architecture?"
+claude "この機能を現在のアーキテクチャとどう統合できる？"
 ```
 
 **メリット**:
@@ -132,16 +132,16 @@ claude "how can we integrate this feature with our current architecture?"
 **Claude Codeの活用**:
 ```bash
 # コンポーネント作成
-claude "create a reusable modal component with React and TypeScript"
+claude "ReactとTypeScriptで再利用可能なモーダルコンポーネントを作成して"
 
 # スタイリング
-claude "add responsive styling to this component using CSS Grid"
+claude "CSS Gridを使ってこのコンポーネントにレスポンシブスタイリングを追加して"
 
 # アクセシビリティ対応
-claude "improve accessibility for this form component"
+claude "このフォームコンポーネントのアクセシビリティを改善して"
 
 # テスト追加
-claude "add unit tests for the modal component"
+claude "モーダルコンポーネントのユニットテストを追加して"
 ```
 
 **メリット**:
@@ -158,13 +158,13 @@ claude "add unit tests for the modal component"
 **Claude Codeの活用**:
 ```bash
 # エラー解析
-claude "analyze this console error: [エラーメッセージ]"
+claude "このコンソールエラーを分析して: [エラーメッセージ]"
 
 # 修正実装
-claude "fix the layout bug on mobile devices"
+claude "モバイルデバイスでのレイアウトバグを修正して"
 
 # クロスブラウザ対応
-claude "ensure this works on Safari and IE11"
+claude "SafariとIE11で動作するように確認して"
 ```
 
 **メリット**:
@@ -185,19 +185,19 @@ claude "ensure this works on Safari and IE11"
 **Claude Codeの活用**:
 ```bash
 # API設計
-claude "design a RESTful API for user management"
+claude "ユーザー管理のRESTful APIを設計して"
 
 # 実装
-claude "implement the user API endpoints with Express and TypeScript"
+claude "ExpressとTypeScriptでユーザーAPIエンドポイントを実装して"
 
 # バリデーション追加
-claude "add input validation and error handling"
+claude "入力バリデーションとエラーハンドリングを追加して"
 
 # ドキュメント生成
-claude "generate OpenAPI specification for these endpoints"
+claude "これらのエンドポイントのOpenAPI仕様書を生成して"
 
 # テスト作成
-claude "add integration tests for the user API"
+claude "ユーザーAPIの統合テストを追加して"
 ```
 
 **メリット**:
@@ -214,13 +214,13 @@ claude "add integration tests for the user API"
 **Claude Codeの活用**:
 ```bash
 # クエリ分析
-claude "analyze this SQL query and suggest optimizations"
+claude "このSQLクエリを分析して最適化案を提案して"
 
 # インデックス設計
-claude "suggest indexes for this database schema"
+claude "このデータベーススキーマのインデックスを提案して"
 
 # マイグレーション作成
-claude "create a migration to add the suggested indexes"
+claude "提案されたインデックスを追加するマイグレーションを作成して"
 ```
 
 **MCP統合（Postgres）**:
@@ -229,7 +229,7 @@ claude "create a migration to add the suggested indexes"
 claude mcp add postgres -- npx @modelcontextprotocol/server-postgres
 
 # クエリパフォーマンス分析
-claude "analyze slow queries in the production database"
+claude "本番データベースで遅いクエリを分析して"
 ```
 
 **メリット**:
@@ -250,13 +250,13 @@ claude "analyze slow queries in the production database"
 **Claude Codeの活用**:
 ```bash
 # GitHub Actions設定作成
-claude "create a GitHub Actions workflow for testing and deployment"
+claude "テストとデプロイのためのGitHub Actionsワークフローを作成して"
 
 # Docker化
-claude "create Dockerfile and docker-compose.yml for this project"
+claude "このプロジェクトのDockerfileとdocker-compose.ymlを作成して"
 
 # 環境変数管理
-claude "add environment variable handling with .env files"
+claude ".envファイルを使った環境変数の取り扱いを追加して"
 ```
 
 **メリット**:
@@ -273,13 +273,13 @@ claude "add environment variable handling with .env files"
 **Claude Codeの活用**:
 ```bash
 # Terraform設定作成
-claude "create Terraform configuration for AWS ECS deployment"
+claude "AWS ECSデプロイ用のTerraform設定を作成して"
 
 # セキュリティグループ設定
-claude "add security group rules following the principle of least privilege"
+claude "最小権限の原則に従ってセキュリティグループルールを追加して"
 
 # ドキュメント作成
-claude "generate documentation for this infrastructure setup"
+claude "このインフラ設定のドキュメントを生成して"
 ```
 
 **メリット**:
@@ -300,13 +300,13 @@ claude "generate documentation for this infrastructure setup"
 **Claude Codeの活用**:
 ```bash
 # E2Eテスト作成
-claude "create E2E tests for the login flow using Playwright"
+claude "Playwrightを使ってログインフローのE2Eテストを作成して"
 
 # テストデータ生成
-claude "generate test data for user registration scenarios"
+claude "ユーザー登録シナリオ用のテストデータを生成して"
 
 # テストカバレッジ向上
-claude "identify untested code paths and add tests"
+claude "テストされていないコードパスを特定してテストを追加して"
 ```
 
 **メリット**:
@@ -326,29 +326,29 @@ claude "identify untested code paths and add tests"
 
 **ステップ1: 現状分析**
 ```bash
-claude "analyze @legacy/payment-service.js and identify technical debt"
+claude "@legacy/payment-service.js を分析して技術的負債を特定して"
 ```
 
 **ステップ2: テスト追加**
 ```bash
-claude "add characterization tests for the existing behavior"
+claude "既存の動作を確認するための特性テストを追加して"
 ```
 
 **ステップ3: リファクタリング計画**
 ```bash
-claude --permission-mode plan "refactor payment service to modern standards"
+claude --permission-mode plan "決済サービスを現代的な標準にリファクタリングする計画を作成して"
 ```
 
 **ステップ4: 段階的リファクタリング**
 ```bash
-claude "extract payment validation into separate functions"
-claude "add TypeScript types"
-claude "improve error handling"
+claude "決済バリデーションを別の関数に抽出して"
+claude "TypeScriptの型を追加して"
+claude "エラーハンドリングを改善して"
 ```
 
 **ステップ5: 検証**
 ```bash
-claude "run all tests and verify no regression"
+claude "全てのテストを実行してリグレッションがないことを確認して"
 ```
 
 **メリット**:
@@ -366,24 +366,24 @@ claude "run all tests and verify no regression"
 
 **ステップ1: 問題の特定**
 ```bash
-claude "analyze this error log and identify the root cause"
-claude "check @logs/production-error.log"
+claude "このエラーログを分析して根本原因を特定して"
+claude "@logs/production-error.log をチェックして"
 ```
 
 **ステップ2: 修正実装**
 ```bash
-claude "create a hotfix for the payment processing bug"
+claude "決済処理のバグのホットフィックスを作成して"
 ```
 
 **ステップ3: テスト追加**
 ```bash
-claude "add tests to prevent this bug from recurring"
+claude "このバグの再発を防止するテストを追加して"
 ```
 
 **ステップ4: リリース**
 ```bash
-claude "create a hotfix branch and commit the changes"
-claude "generate release notes for this hotfix"
+claude "ホットフィックスブランチを作成して変更をコミットして"
+claude "このホットフィックスのリリースノートを生成して"
 ```
 
 **メリット**:
@@ -401,23 +401,23 @@ claude "generate release notes for this hotfix"
 
 **ステップ1: 調査**
 ```bash
-claude "compare React Query vs SWR for data fetching"
-claude "what are the pros and cons of each?"
+claude "データ取得にReact QueryとSWRを比較して"
+claude "それぞれの長所と短所は何？"
 ```
 
 **ステップ2: プロトタイプ作成**
 ```bash
-claude "create a prototype using React Query with TypeScript"
+claude "TypeScriptでReact Queryを使ったプロトタイプを作成して"
 ```
 
 **ステップ3: 既存コードの移行**
 ```bash
-claude "migrate @src/api/users.js to use React Query"
+claude "@src/api/users.js をReact Queryを使うように移行して"
 ```
 
 **ステップ4: ドキュメント作成**
 ```bash
-claude "create a migration guide for the team"
+claude "チーム向けのマイグレーションガイドを作成して"
 ```
 
 **メリット**:
@@ -435,22 +435,22 @@ claude "create a migration guide for the team"
 
 **ステップ1: 境界の特定**
 ```bash
-claude --thinking "analyze this codebase and suggest microservice boundaries"
+claude --thinking "このコードベースを分析してマイクロサービスの境界を提案して"
 ```
 
 **ステップ2: サービス設計**
 ```bash
-claude "design a user service with gRPC or REST API"
+claude "gRPCまたはREST APIを使ったユーザーサービスを設計して"
 ```
 
 **ステップ3: 実装**
 ```bash
-claude "create a microservice template with Express, TypeScript, and Docker"
+claude "Express、TypeScript、Dockerを使ったマイクロサービステンプレートを作成して"
 ```
 
 **ステップ4: 統合**
 ```bash
-claude "implement service discovery and load balancing"
+claude "サービスディスカバリとロードバランシングを実装して"
 ```
 
 **メリット**:
@@ -679,12 +679,12 @@ claude "同じ機能の3つの実装（@reference/pattern_a/, pattern_b/, patter
 
 2. **自動適用**
 ```bash
-claude "apply coding standards to all changed files"
+claude "変更された全てのファイルにコーディング規約を適用して"
 ```
 
 3. **レビューでの活用**
 ```bash
-claude "check if this PR follows our coding standards"
+claude "このPRがコーディング規約に従っているかチェックして"
 ```
 
 **メリット**:

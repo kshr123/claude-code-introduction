@@ -46,6 +46,11 @@ Claude Code     → ターミナルでファイル編集・コマンド実行・
 2. **プロジェクトメモリ** - `.claude/CLAUDE.md`で独自ルールを永続化
 3. **チーム共有** - プロジェクトメモリをGitで共有してワークフロー統一
 
+**参考記事**:
+- [GitHub Copilot CLI vs Claude Code詳細比較 (CometAPI)](https://www.cometapi.com/github-copilot-cli-vs-claude-code/)
+- [Gemini CLI vs Claude Code比較 (Composio)](https://composio.dev/blog/gemini-cli-vs-claude-code-the-better-coding-agent)
+- [CLI AI ツール総合比較 (CodeAnt AI)](https://www.codeant.ai/blogs/claude-code-cli-vs-codex-cli-vs-gemini-cli-best-ai-cli-tool-for-developers-in-2025)
+
 ---
 
 ## 🚀 インストール
@@ -161,6 +166,121 @@ claude update
 
 # 環境診断
 claude doctor
+```
+
+---
+
+## 💡 Claude Code 使いこなしチップス
+
+### @ (ファイル参照)
+
+`@`を使って特定のファイルやディレクトリを参照できます。
+
+```bash
+# 特定のファイルを参照
+claude "review @src/auth.js のセキュリティ"
+
+# ディレクトリ全体を参照
+claude "@src/components/ のReactコンポーネントを分析して"
+
+# 複数ファイルを参照
+claude "@package.json と @README.md を確認して依存関係を説明して"
+```
+
+**使いどころ**:
+- コードレビュー
+- 特定ファイルの修正
+- 関連ファイルの分析
+
+### / (スラッシュコマンド)
+
+対話モードで使える便利なコマンド。
+
+#### 基本コマンド
+
+```bash
+/help       # ヘルプを表示
+/clear      # 会話履歴をクリア
+/model      # モデルを変更（Sonnet/Opus/Haiku）
+/cost       # トークン使用量を表示
+/mcp        # MCP サーバー管理
+/sandbox    # サンドボックスモードの切り替え
+/rewind     # 会話を巻き戻す
+```
+
+#### カスタムスラッシュコマンド
+
+頻繁に使うプロンプトをコマンド化できます。
+
+**プロジェクト共有コマンド** (`.claude/commands/`)
+
+```bash
+# .claude/commands/review.md
+---
+description: コードレビューを実施
+---
+変更されたファイルを全てレビューして、以下を確認:
+- セキュリティ問題
+- パフォーマンス問題
+- ベストプラクティス違反
+```
+
+使い方:
+```bash
+claude
+> /review
+```
+
+**個人用コマンド** (`~/.claude/commands/`)
+
+```bash
+# ~/.claude/commands/explain.md
+---
+description: コードを詳しく説明
+---
+$ARGUMENTS のコードを初心者にもわかるように詳しく説明して
+```
+
+使い方:
+```bash
+claude
+> /explain @src/utils/helper.js
+```
+
+**引数の使い方**:
+- `$ARGUMENTS` - 全ての引数
+- `$1`, `$2`, `$3` - 個別の引数
+
+**Bash実行** (`!` プレフィックス):
+```markdown
+# .claude/commands/test.md
+---
+description: テストを実行してから分析
+---
+!npm test
+テスト結果を分析して問題があれば修正案を提示して
+```
+
+**詳細**: [公式ドキュメント - Slash commands](https://docs.claude.com/en/docs/claude-code/slash-commands)
+
+### その他の便利な機能
+
+#### --thinking モード
+
+複雑な設計や計画に使用:
+```bash
+claude --thinking "スケーラブルな通知システムを設計して"
+```
+
+#### --permission-mode
+
+Claude Codeの動作モードを指定:
+```bash
+# 計画モード（実行前に計画を確認）
+claude --permission-mode plan "大規模なリファクタリングを実行"
+
+# 自動モード（確認なしで実行）
+claude --permission-mode always "lintエラーを全て修正"
 ```
 
 ---

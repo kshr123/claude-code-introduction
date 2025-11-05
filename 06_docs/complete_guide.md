@@ -60,6 +60,11 @@ Claude Code     → ターミナルでファイル操作・コマンド実行・
 2. **プロジェクトメモリ** - `.claude/CLAUDE.md`で独自ルールを永続化
 3. **チーム共有** - プロジェクトメモリをGitで共有してワークフロー統一
 
+**参考記事**:
+- [GitHub Copilot CLI vs Claude Code詳細比較 (CometAPI)](https://www.cometapi.com/github-copilot-cli-vs-claude-code/)
+- [Gemini CLI vs Claude Code比較 (Composio)](https://composio.dev/blog/gemini-cli-vs-claude-code-the-better-coding-agent)
+- [CLI AI ツール総合比較 (CodeAnt AI)](https://www.codeant.ai/blogs/claude-code-cli-vs-codex-cli-vs-gemini-cli-best-ai-cli-tool-for-developers-in-2025)
+
 ---
 
 ## クイックスタート
@@ -99,6 +104,40 @@ README.mdに「Hello, Claude Code!」という見出しを追加して
 ```
 
 **詳細**: [00_quickstart.md](../04_notes/00_quickstart.md)
+
+### 使いこなしチップス
+
+#### @ (ファイル参照)
+
+```bash
+# 特定のファイルを参照
+claude "review @src/auth.js のセキュリティ"
+
+# 複数ファイルを参照
+claude "@package.json と @README.md を確認して"
+```
+
+#### / (スラッシュコマンド)
+
+基本コマンド:
+```bash
+/help       # ヘルプ表示
+/clear      # 会話履歴クリア
+/model      # モデル変更
+/cost       # トークン使用量
+/rewind     # 会話を巻き戻す
+```
+
+カスタムコマンド (`.claude/commands/`):
+```markdown
+# .claude/commands/review.md
+---
+description: コードレビュー実施
+---
+変更ファイルを全てレビューして問題を報告
+```
+
+**詳細**: [公式ドキュメント - Slash commands](https://docs.claude.com/en/docs/claude-code/slash-commands)
 
 ---
 
