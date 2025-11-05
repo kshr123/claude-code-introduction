@@ -14,9 +14,13 @@ Claude Codeを使用する際のよくある質問とトラブルシューティ
 
 | プラン | 料金 | 特徴 |
 |-------|------|------|
-| Claude Pro | 約2万円/月 | 個人利用向け |
-| Claude Team | 約3万円/月/人 | チーム向け |
-| Enterprise | 要相談 | Bedrock/Vertex AI経由 |
+| Claude Pro | $20/月 | 個人利用向け、基本機能 |
+| Claude Max 5x | $100/月 | 5倍の使用量、優先アクセス |
+| Claude Max 20x | $200/月 | 20倍の使用量、最高優先度 |
+| Claude Team | $30/月/人 | チーム向け、共同作業機能 |
+| Enterprise | 要相談 | Bedrock/Vertex AI経由、カスタム統合 |
+
+**注意**: 料金は2025年11月時点のものです。最新情報は https://claude.com/pricing を確認してください。
 
 ---
 
