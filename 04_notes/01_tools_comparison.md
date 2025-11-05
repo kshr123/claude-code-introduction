@@ -1,8 +1,50 @@
 # AI コーディングツール徹底比較
 
 **作成日**: 2025-11-05
+**最終更新**: 2025-11-05
 
 Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorの4つの主要AIコーディングツールを徹底比較します。
+
+また、OpenAI Codexの歴史と現状についても解説します。
+
+---
+
+## ⚠️ OpenAI Codexについて
+
+**OpenAI Codex**は、AIコーディングツールの歴史において重要な役割を果たしましたが、現在は2つの異なる時代に分かれています。
+
+### 旧Codex（2021-2023）: コード補完モデル
+
+- **発表**: 2021年8月10日
+- **基盤**: GPT-3ベース（159GBのPythonコードで追加学習）
+- **用途**: コード補完、GitHub Copilotの初期モデル
+- **精度**: 37%（1回試行）、70.2%（100回試行）
+- **廃止**: 2023年3月23日（GPT-3.5 Turboへの移行を推奨）
+
+**歴史的意義**:
+- GitHub Copilotの基盤技術として、AIコーディングアシスタントの先駆け
+- コード生成AIの商用化を実現
+- 12以上のプログラミング言語に対応（特にPythonに強い）
+
+### 新Codex（2025年〜）: 自律型ソフトウェアエンジニアリングエージェント
+
+- **発表**: 2025年5月16日（リサーチプレビュー）
+- **基盤**: OpenAI o3モデルの特化版（codex-1）
+- **用途**: 完全自律型のソフトウェア開発エージェント
+- **精度**: 75%（o3の最高性能版より5%向上）
+- **ライセンス**: Apache 2.0（Codex CLI）
+
+**主な機能**:
+- 機能実装の完全自動化
+- テスト実行
+- PR（プルリクエスト）作成
+- 一時的なLinuxコンテナで安全に実行
+
+**現状**: リサーチプレビュー段階（2025年5月時点）
+
+---
+
+**このドキュメントの対象**: 本ガイドでは、**現在商用利用可能な4つのツール**（Claude Code、GitHub Copilot CLI、Gemini CLI、Cursor）を中心に比較します。新Codexは参考情報として記載しますが、リサーチプレビュー段階のため詳細な比較対象には含めていません。
 
 ---
 
@@ -12,6 +54,7 @@ Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorの4つの主要AIコー�
 2. [詳細比較表](#詳細比較表)
 3. [各ツールの特徴](#各ツールの特徴)
 4. [選び方ガイド](#選び方ガイド)
+5. [OpenAI Codexの詳細](#openai-codexの詳細)
 
 ---
 
@@ -451,6 +494,177 @@ Cursor: IDE環境で完結、リアルタイム補完重視
 
 ---
 
+## OpenAI Codexの詳細
+
+### 旧Codex（2021-2023）の歴史
+
+#### 開発の背景
+
+OpenAI Codexは、GPT-3の自然言語処理能力をコード生成に特化させたモデルとして2021年8月に発表されました。
+
+**学習データ**:
+- 54百万のGitHubリポジトリ
+- 159GB のPythonコード
+- 12以上のプログラミング言語（Python, JavaScript, Go, Perl, PHP, Ruby, Swift, TypeScript等）
+
+#### 技術的特徴
+
+**性能**:
+```
+単発試行（n=1）: 37% の成功率
+100回試行（n=100）: 70.2% の成功率
+```
+
+**対応言語の優先度**:
+1. Python（最も強い）
+2. JavaScript
+3. TypeScript
+4. その他の主要言語
+
+#### 影響と遺産
+
+**GitHub Copilot**:
+- 2021年: Copilotの初期バージョンの基盤モデル
+- Codex廃止後: 独自の進化を遂げ、Claude Sonnet 4やGPT-5 Codexなど複数モデルに対応
+
+**AIコーディングツール市場の創出**:
+- コード生成AIの商用化を実現
+- 開発者向けAIアシスタントの標準を確立
+- Claude Code、Cursor、Gemini CLIなどの後続ツールに影響
+
+#### 廃止の理由
+
+**2023年3月23日に廃止**:
+1. GPT-3.5/GPT-4の登場により、Codexの相対的な性能が低下
+2. より汎用的なモデルでコード生成が可能に
+3. メンテナンスコストと性能のトレードオフ
+
+**移行先**:
+- GPT-3.5 Turbo（推奨）
+- GPT-4（より高性能）
+
+---
+
+### 新Codex（2025年〜）の詳細
+
+#### 発表とリリース
+
+**タイムライン**:
+- **2025年4月16日**: Codex CLI（Apache 2.0）をGitHubに公開
+- **2025年5月16日**: 新Codexをリサーチプレビューとして発表
+- **2025年9月23日**: GPT-5-Codexが開発者API経由で利用可能に
+
+#### 技術アーキテクチャ
+
+**基盤モデル**:
+- **codex-1**: OpenAI o3の特化版
+- コーディングタスクに最適化
+- o3の最高性能版（ハードウェア集約型）より5%高い精度
+
+**実行環境**:
+```
+Linux一時コンテナ
+├── リポジトリクローン
+├── コード生成
+├── テスト実行
+└── PR作成
+```
+
+**安全性**:
+- サンドボックス化された環境
+- 一時的なコンテナで実行後破棄
+- ローカルシステムへの影響を最小化
+
+#### 主な機能
+
+**完全自律型開発**:
+1. **コードベース理解**: プロジェクト全体を分析
+2. **機能実装**: 要件から実装まで自動化
+3. **テスト実行**: 自動テスト実施と結果確認
+4. **PR作成**: コミットメッセージとPR説明を自動生成
+
+**性能指標**:
+- **精度**: 75%（OpenAI内部テスト）
+- **対応タスク**: 機能実装、バグ修正、リファクタリング、テスト作成
+
+#### 現在の提供形態
+
+**利用可能なプラン**:
+- ChatGPT Plus
+- ChatGPT Pro
+- ChatGPT Business
+- ChatGPT Edu
+- ChatGPT Enterprise
+
+**API アクセス**:
+- 開発者APIキー経由で利用可能（2025年9月〜）
+- プログラマティックな統合が可能
+
+#### 他ツールとの比較
+
+| 項目 | 新Codex (2025) | Claude Code | GitHub Copilot CLI | Gemini CLI | Cursor |
+|------|---------------|-------------|-------------------|-----------|--------|
+| **リリース状態** | リサーチプレビュー | 商用 | 商用 | 商用 | 商用 |
+| **基盤モデル** | o3特化版 | Claude Sonnet 4.5 | Claude/GPT-5 | Gemini 2.5 Pro | 複数モデル |
+| **精度** | 75% | - | - | - | - |
+| **実行環境** | Linuxコンテナ | ローカル | ローカル | ローカル | IDE |
+| **自律性** | 完全自律 | 高 | 中 | 高 | 中 |
+| **料金** | ChatGPT Plus〜 | $20〜/月 | $10〜/月 | 無料〜 | $20〜/月 |
+
+---
+
+### Codexの将来展望
+
+#### 期待される進化
+
+**短期（2025-2026）**:
+- リサーチプレビューから正式リリースへ
+- より多くの言語とフレームワークへの対応
+- 精度のさらなる向上
+
+**中期（2026-2027）**:
+- 複雑なアーキテクチャ設計の自動化
+- マルチリポジトリ対応
+- チーム開発ワークフローへの統合
+
+**長期ビジョン**:
+- ソフトウェアエンジニアリングの完全自動化
+- 要件定義からデプロイまでのエンドツーエンド対応
+- 人間エンジニアとの協調作業の最適化
+
+#### 課題と懸念
+
+**技術的課題**:
+- 複雑なビジネスロジックの理解
+- レガシーコードとの統合
+- セキュリティとプライバシーの保証
+
+**倫理的懸念**:
+- 雇用への影響
+- コード品質の責任所在
+- AIへの過度な依存
+
+---
+
+### まとめ：Codexの意義
+
+**旧Codex（2021-2023）**:
+- AIコーディングアシスタント市場を創出
+- GitHub Copilotを通じてコード生成AIを普及
+- 現在のAIコーディングツールの基礎を築いた
+
+**新Codex（2025〜）**:
+- コード補完から完全自律型エージェントへの進化
+- ソフトウェア開発の新しいパラダイム
+- AIとエンジニアの協働モデルの提示
+
+**現在の選択肢**:
+- **新Codexを試したい** → ChatGPT Plus契約後にリサーチプレビューに参加
+- **商用環境で安定利用** → Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorから選択
+- **無料で試したい** → Gemini CLI（完全無料）
+
+---
+
 ## 参考リンク
 
 ### 公式ドキュメント
@@ -459,6 +673,8 @@ Cursor: IDE環境で完結、リアルタイム補完重視
 - **GitHub Copilot CLI**: https://github.com/features/copilot/cli
 - **Gemini CLI**: https://google-gemini.github.io/gemini-cli/
 - **Cursor**: https://cursor.com/
+- **OpenAI Codex**: https://openai.com/index/introducing-upgrades-to-codex/ (旧版)
+- **Codex CLI (GitHub)**: https://github.com/openai/codex (新版)
 
 ### 料金ページ
 
@@ -472,6 +688,8 @@ Cursor: IDE環境で完結、リアルタイム補完重視
 - [GitHub Copilot CLI vs Claude Code (CometAPI)](https://www.cometapi.com/github-copilot-cli-vs-claude-code/)
 - [Gemini CLI vs Claude Code (Composio)](https://composio.dev/blog/gemini-cli-vs-claude-code-the-better-coding-agent)
 - [Cursor AI Pricing Guide (CometAPI)](https://www.cometapi.com/cursor-ai-pricing-2025-complete-guide-analysis/)
+- [OpenAI Codex: Definition, History & Alternatives (Skywork AI)](https://skywork.ai/blog/openai-codex-definition/)
+- [OpenAI Codex - Wikipedia](https://en.wikipedia.org/wiki/OpenAI_Codex)
 
 ---
 
