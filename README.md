@@ -2,6 +2,10 @@
 
 Claude Codeを初めて使う人のための実践的なガイドです。
 
+![Claude Code in Action](06_docs/images/claude-code-in-action.png)
+
+*このドキュメント自体がClaude Codeで作成されました - エディタで.claude/CLAUDE.mdを編集しながら、ターミナルでClaude Codeと対話している実際の様子*
+
 ## 📁 リポジトリ構造
 
 ```
