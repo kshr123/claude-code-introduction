@@ -45,7 +45,7 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 
 ## 📚 ガイドコンテンツ
 
-### 完成済み（7記事 + 統合版）
+### 完成済み（8記事 + 統合版）
 
 1. **[クイックスタートガイド](04_notes/00_quickstart.md)** - 5分で始める基本の使い方
 2. **[AIツール徹底比較](04_notes/01_tools_comparison.md)** - Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorの比較 ⭐
@@ -54,7 +54,8 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 5. **[ユースケース集](04_notes/04_use_cases.md)** - 職種別・シチュエーション別の活用例
 6. **[FAQ](04_notes/05_faq.md)** - よくある質問とトラブルシューティング
 7. **[エージェント・スキル・MCP完全ガイド](04_notes/06_agents_skills_mcp.md)** - エージェント、スキル、MCP、プラグインの詳細と使い分け ⭐⭐
-8. **[完全ガイド](06_docs/complete_guide.md)** - 全ての情報を統合した完全版
+8. **[GitHub Actions & Git Worktree](04_notes/07_github_actions_worktree.md)** - CI/CD自動化と並列開発ワークフロー ⭐⭐⭐
+9. **[完全ガイド](06_docs/complete_guide.md)** - 全ての情報を統合した完全版
 
 ## 🚀 このリポジトリの使い方
 
@@ -72,7 +73,8 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 1. **[基本機能の詳細](04_notes/02_research.md)** - 機能を詳しく理解
 2. **[プロジェクトメモリ](04_notes/03_project_memory.md)** - チーム活用の鍵
 3. **[エージェント・スキル・MCP](04_notes/06_agents_skills_mcp.md)** - 拡張機能の完全ガイド ⭐⭐
-4. **[ユースケース集](04_notes/04_use_cases.md)** - 実践的な活用例
+4. **[GitHub Actions & Git Worktree](04_notes/07_github_actions_worktree.md)** - 自動化と並列開発 ⭐⭐⭐
+5. **[ユースケース集](04_notes/04_use_cases.md)** - 実践的な活用例
 
 #### ツール選定担当者向け
 
@@ -94,7 +96,7 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 - **作成開始**: 2025-11-05
 - **完成日**: 2025-11-05
 - **進捗状況**: 全ガイド完成✅
-- **完成済み記事**: 7記事 + 統合版
+- **完成済み記事**: 8記事 + 統合版
   - ✅ クイックスタートガイド
   - ✅ 基本機能の詳細
   - ✅ プロジェクトメモリガイド
@@ -102,6 +104,7 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
   - ✅ FAQ
   - ✅ AIツール徹底比較 ⭐
   - ✅ エージェント・スキル・MCP完全ガイド ⭐⭐
+  - ✅ GitHub Actions & Git Worktree ⭐⭐⭐
   - ✅ 完全ガイド（統合版）
 
 ## 📖 参考リンク
