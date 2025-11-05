@@ -45,8 +45,8 @@
   - 詳細: [04_notes/05_faq.md](../04_notes/05_faq.md)
   - 内容: よくある質問とトラブルシューティング
 
-- [x] **06_tools_comparison** - AIツール徹底比較 (完了: 2025-11-05) ⭐
-  - 詳細: [04_notes/06_tools_comparison.md](../04_notes/06_tools_comparison.md)
+- [x] **01_tools_comparison** - AIツール徹底比較 (完了: 2025-11-05) ⭐
+  - 詳細: [04_notes/01_tools_comparison.md](../04_notes/01_tools_comparison.md)
   - 内容: Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorの詳細比較
 
 - [x] **complete_guide** - 完全ガイド（統合版） (完了: 2025-11-05)
@@ -119,8 +119,9 @@
 - 📚 CLI比較情報を修正（MCP対応状況を正確に）
 - 💡 Claude Codeチップス（@と/の使い方）を追加
 - ⚠️ README.mdにAI生成コンテンツの注意事項を追加
-- 🆚 AIツール徹底比較ガイドを作成（06_tools_comparison.md）
+- 🆚 AIツール徹底比較ガイドを作成（01_tools_comparison.md）
   - Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorの4大ツールを比較
   - 料金、機能、技術仕様、選び方ガイドを網羅
+  - ファイル名を06→01に変更して連番を整理
 - 📝 README.mdとlearning_log.mdを再更新
 - 🎊 全ガイド完成（6記事 + 統合版）

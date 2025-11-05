@@ -44,11 +44,11 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 ### 完成済み（6記事 + 統合版）
 
 1. **[クイックスタートガイド](04_notes/00_quickstart.md)** - 5分で始める基本の使い方
-2. **[基本機能の詳細](04_notes/02_research.md)** - 4つの中核機能と高度な機能
-3. **[プロジェクトメモリガイド](04_notes/03_project_memory.md)** - `.claude/CLAUDE.md`の活用法
-4. **[ユースケース集](04_notes/04_use_cases.md)** - 職種別・シチュエーション別の活用例
-5. **[FAQ](04_notes/05_faq.md)** - よくある質問とトラブルシューティング
-6. **[AIツール徹底比較](04_notes/06_tools_comparison.md)** - Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorの比較 ⭐
+2. **[AIツール徹底比較](04_notes/01_tools_comparison.md)** - Claude Code、GitHub Copilot CLI、Gemini CLI、Cursorの比較 ⭐
+3. **[基本機能の詳細](04_notes/02_research.md)** - 4つの中核機能と高度な機能
+4. **[プロジェクトメモリガイド](04_notes/03_project_memory.md)** - `.claude/CLAUDE.md`の活用法
+5. **[ユースケース集](04_notes/04_use_cases.md)** - 職種別・シチュエーション別の活用例
+6. **[FAQ](04_notes/05_faq.md)** - よくある質問とトラブルシューティング
 7. **[完全ガイド](06_docs/complete_guide.md)** - 全ての情報を統合した完全版
 
 ## 🚀 このリポジトリの使い方
@@ -58,7 +58,7 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 #### 初心者向け（最初はこちら）
 
 1. **[クイックスタート](04_notes/00_quickstart.md)** - まずは5分で試してみる
-2. **[AIツール比較](04_notes/06_tools_comparison.md)** - 他ツールとの違いを理解 ⭐
+2. **[AIツール比較](04_notes/01_tools_comparison.md)** - 他ツールとの違いを理解 ⭐
 3. **[FAQ](04_notes/05_faq.md)** - 困ったときはここを確認
 4. **[完全ガイド](06_docs/complete_guide.md)** - 全体像を把握する
 
@@ -70,7 +70,7 @@ Claude Codeの使い方と活用方法を体系的にまとめ、初心者がス
 
 #### ツール選定担当者向け
 
-1. **[AIツール徹底比較](04_notes/06_tools_comparison.md)** - 4大ツールの詳細比較
+1. **[AIツール徹底比較](04_notes/01_tools_comparison.md)** - 4大ツールの詳細比較
 2. **[ユースケース集](04_notes/04_use_cases.md)** - 実際の効果を確認
 3. **[プロジェクトメモリ](04_notes/03_project_memory.md)** - チーム導入の鍵
 
